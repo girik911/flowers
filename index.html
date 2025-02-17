@@ -6,9 +6,7 @@
     <title>Flower Animation</title>
     <style>
         /* CSS Code from previous responses */
-        *,
-        *::after,
-        *::before {
+        *, *::after, *::before {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
@@ -26,7 +24,6 @@
             background-color: var(--dark-color);
             overflow: hidden;
             perspective: 1000px;
-            /* Add this for the loading screen effect */
             transition: opacity 1s ease; /* Smooth transition for fade-out */
             opacity: 0; /* Initially hidden */
         }
@@ -35,11 +32,14 @@
             opacity: 1; /* Visible while loading */
         }
 
-        /* ... (Rest of the CSS from the previous responses) ... */
+        .night { /* ... (Rest of your CSS code) ... */ }
+        .flowers { /* ... */ }
+        .flower { /* ... */ }
+        /* ... (All your other CSS rules) ... */
 
     </style>
 </head>
-<body>
+<body class="not-loaded">
 
     <div class="night"></div>
     <div class="flowers">
@@ -50,7 +50,6 @@
                 <div class="flower__leaf flower__leaf--3"></div>
                 <div class="flower__leaf flower__leaf--4"></div>
                 <div class="flower__white-circle"></div>
-
                 <div class="flower__light flower__light--1"></div>
                 <div class="flower__light flower__light--2"></div>
                 <div class="flower__light flower__light--3"></div>
@@ -59,7 +58,6 @@
                 <div class="flower__light flower__light--6"></div>
                 <div class="flower__light flower__light--7"></div>
                 <div class="flower__light flower__light--8"></div>
-
             </div>
             <div class="flower__line">
                 <div class="flower__line__leaf flower__line__leaf--1"></div>
@@ -72,56 +70,52 @@
         </div>
 
         <div class="flower flower--2">
-            <div class="flower__leafs flower__leafs--2">
-                <div class="flower__leaf flower__leaf--1"></div>
-                <div class="flower__leaf flower__leaf--2"></div>
-                <div class="flower__leaf flower__leaf--3"></div>
-                <div class="flower__leaf flower__leaf--4"></div>
-                <div class="flower__white-circle"></div>
+          <div class="flower__leafs flower__leafs--2">
+              <div class="flower__leaf flower__leaf--1"></div>
+              <div class="flower__leaf flower__leaf--2"></div>
+              <div class="flower__leaf flower__leaf--3"></div>
+              <div class="flower__leaf flower__leaf--4"></div>
+              <div class="flower__white-circle"></div>
+              <div class="flower__light flower__light--1"></div>
+              <div class="flower__light flower__light--2"></div>
+              <div class="flower__light flower__light--3"></div>
+              <div class="flower__light flower__light--4"></div>
+              <div class="flower__light flower__light--5"></div>
+              <div class="flower__light flower__light--6"></div>
+              <div class="flower__light flower__light--7"></div>
+              <div class="flower__light flower__light--8"></div>
+          </div>
+          <div class="flower__line">
+              <div class="flower__line__leaf flower__line__leaf--1"></div>
+              <div class="flower__line__leaf flower__line__leaf--2"></div>
+              <div class="flower__line__leaf flower__line__leaf--3"></div>
+              <div class="flower__line__leaf flower__line__leaf--4"></div>
+          </div>
+      </div>
 
-                <div class="flower__light flower__light--1"></div>
-                <div class="flower__light flower__light--2"></div>
-                <div class="flower__light flower__light--3"></div>
-                <div class="flower__light flower__light--4"></div>
-                <div class="flower__light flower__light--5"></div>
-                <div class="flower__light flower__light--6"></div>
-                <div class="flower__light flower__light--7"></div>
-                <div class="flower__light flower__light--8"></div>
-
-            </div>
-            <div class="flower__line">
-                <div class="flower__line__leaf flower__line__leaf--1"></div>
-                <div class="flower__line__leaf flower__line__leaf--2"></div>
-                <div class="flower__line__leaf flower__line__leaf--3"></div>
-                <div class="flower__line__leaf flower__line__leaf--4"></div>
-            </div>
-        </div>
-
-        <div class="flower flower--3">
-            <div class="flower__leafs flower__leafs--3">
-                <div class="flower__leaf flower__leaf--1"></div>
-                <div class="flower__leaf flower__leaf--2"></div>
-                <div class="flower__leaf flower__leaf--3"></div>
-                <div class="flower__leaf flower__leaf--4"></div>
-                <div class="flower__white-circle"></div>
-
-                <div class="flower__light flower__light--1"></div>
-                <div class="flower__light flower__light--2"></div>
-                <div class="flower__light flower__light--3"></div>
-                <div class="flower__light flower__light--4"></div>
-                <div class="flower__light flower__light--5"></div>
-                <div class="flower__light flower__light--6"></div>
-                <div class="flower__light flower__light--7"></div>
-                <div class="flower__light flower__light--8"></div>
-
-            </div>
-            <div class="flower__line">
-                <div class="flower__line__leaf flower__line__leaf--1"></div>
-                <div class="flower__line__leaf flower__line__leaf--2"></div>
-                <div class="flower__line__leaf flower__line__leaf--3"></div>
-                <div class="flower__line__leaf flower__line__leaf--4"></div>
-            </div>
-        </div>
+      <div class="flower flower--3">
+          <div class="flower__leafs flower__leafs--3">
+              <div class="flower__leaf flower__leaf--1"></div>
+              <div class="flower__leaf flower__leaf--2"></div>
+              <div class="flower__leaf flower__leaf--3"></div>
+              <div class="flower__leaf flower__leaf--4"></div>
+              <div class="flower__white-circle"></div>
+              <div class="flower__light flower__light--1"></div>
+              <div class="flower__light flower__light--2"></div>
+              <div class="flower__light flower__light--3"></div>
+              <div class="flower__light flower__light--4"></div>
+              <div class="flower__light flower__light--5"></div>
+              <div class="flower__light flower__light--6"></div>
+              <div class="flower__light flower__light--7"></div>
+              <div class="flower__light flower__light--8"></div>
+          </div>
+          <div class="flower__line">
+              <div class="flower__line__leaf flower__line__leaf--1"></div>
+              <div class="flower__line__leaf flower__line__leaf--2"></div>
+              <div class="flower__line__leaf flower__line__leaf--3"></div>
+              <div class="flower__line__leaf flower__line__leaf--4"></div>
+          </div>
+      </div>
 
         <div class="grow-ans" style="--d:1.2s">
             <div class="flower__g-long">
@@ -176,4 +170,3 @@
 
         <div class="grow-ans" style="--d:2.8s">
             <div class="flower__g-front">
-                <div class="flower__g-front__leaf-wrapper flower__
